@@ -1,0 +1,69 @@
+.header {
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 15px rgba(0, 30, 60, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d9e9f5;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo h1 {
+  color: #0a4a70;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  font-size: 0.9rem;
+  color: #5a82a3;
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.role-tag {
+  background: #e3f0fa;
+  padding: 0.5rem 1.3rem;
+  border-radius: 40px;
+  color: #0a4a70;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.user-name {
+  color: #2a5778;
+  font-weight: 500;
+}
+
+.logout-btn {
+  background: none;
+  border: 1.5px solid #c5d9eb;
+  padding: 0.5rem 1.3rem;
+  border-radius: 40px;
+  color: #3a6485;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logout-btn:hover {
+  background: #f0f7ff;
+  border-color: #8cb3d1;
+}
+
+.fa-sign-out-alt {
+  font-size: 0.9rem;
+}

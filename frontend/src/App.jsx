@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+
+// Pages
+import SignIn from './pages/SignIn.jsx';
+import PatientSignUp from './pages/PatientSignUp.jsx';
+import AdminDashboard from './pages/AdminDashboard.jsx';
+import DoctorDashboard from './pages/DoctorDashboard.jsx';
+import ReceptionistDashboard from './pages/ReceptionistDashboard.jsx';
+import PatientDashboard from './pages/PatientDashboard.jsx';
+// import Home from './pages/Home.jsx';
+
+// Patient Sub-pages
+// import OurDoctors from './pages/patient/OurDoctors.jsx';
+// import BookAppointment from './pages/patient/BookAppointment.jsx';
+// import MyAppointments from './pages/patient/MyAppointments.jsx';
+
+// Doctor Sub-pages
+import PrescribeMedicine from './pages/doctor/PrescribeMedicine.jsx';
+
+// Receptionist Sub-pages
+import FeeReceipts from './pages/receptionist/FeeReceipts.jsx';
+// import BookDoctor from './pages/receptionist/BookDoctor.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Routes>
+      {/* Auth Routes */}
+      <Route path="/" element={<Navigate to="/signin" replace />} />
+      <Route path="/signin" element={<SignIn />} />
+      <Route path="/signup" element={<PatientSignUp />} />
+
+      {/* Admin Routes */}
+      <Route path="/admin" element={<AdminDashboard />} />
+
+      {/* Doctor Routes */}
+      <Route path="/doctor" element={<DoctorDashboard />} />
+      <Route path="/doctor/prescribe/:patientId" element={<PrescribeMedicine />} />
+
+      {/* Receptionist Routes */}
+      <Route path="/receptionist" element={<ReceptionistDashboard />} />
+      <Route path="/receptionist/receipts" element={<FeeReceipts />} />
+      {/* <Route path="/receptionist/book-doctor" element={<BookDoctor />} /> */}
+
+      {/* Patient Routes */}
+      <Route path="/patient" element={<PatientDashboard />}>
+        {/* <Route index element={<Home />} /> */}
+        {/* <Route path="doctors" element={<OurDoctors />} /> */}
+        {/* <Route path="book-appointment" element={<BookAppointment />} /> */}
+        {/* <Route path="my-appointments" element={<MyAppointments />} /> */}
+      </Route>
+
+      {/* 404 Redirect */}
+      <Route path="*" element={<Navigate to="/signin" replace />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;

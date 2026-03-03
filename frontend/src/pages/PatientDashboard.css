@@ -1,0 +1,33 @@
+.patient-dashboard {
+  min-height: 100vh;
+  background-color: #f5fafd;
+}
+
+.patient-nav {
+  display: flex;
+  gap: 2rem;
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 60px;
+  border: 1px solid #d5e3f0;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.patient-nav a {
+  text-decoration: none;
+  color: #3a6485;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  transition: color 0.2s;
+}
+
+.patient-nav a:hover {
+  color: #0a4a70;
+}
+
+.patient-nav a.active {
+  color: #0a4a70;
+  font-weight: 600;
+  border-bottom: 2px solid #0a4a70;
+}
