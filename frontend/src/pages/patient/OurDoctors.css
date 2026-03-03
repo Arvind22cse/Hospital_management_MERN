@@ -1,0 +1,13 @@
+/* our doctors page */
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.doctor-card {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}

@@ -13,6 +13,183 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* common utilities */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.dashboard-container {
+  padding: 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-card h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0 1rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+ table td {
+  padding: 0.75rem;
+  border: 1px solid #333;
+  text-align: left;
+}
+
+.status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-size: 0.85rem;
+}
+
+.status-badge.available {
+  background: #4caf50;
+  color: #fff;
+}
+.status-badge['in-use'], .status-badge.in-use {
+  background: #ff9800;
+  color: #fff;
+}
+.status-badge.confirmed {
+  background: #2196f3;
+  color: #fff;
+}
+
+.primary-btn {
+  background-color: #646cff;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.primary-btn:hover {
+  opacity: 0.9;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #646cff;
+  padding: 0.6em 1.2em;
+  border: 1px solid #646cff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.secondary-btn:hover {
+  background-color: rgba(100, 108, 255, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  padding: 0.6rem;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background: #222;
+  color: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #646cff;
+}
+
+.navbar,
+.patient-nav,
+.receptionist-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+nav a.active {
+  background: #646cff;
+  color: #fff;
+}
+
+/* utility */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* time slots */
+.time-slot {
+  margin: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background: #1e1e1e;
+  cursor: pointer;
+}
+.time-slot.selected {
+  background: #646cff;
+  color: #fff;
+}
+
+.confirm-btn {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

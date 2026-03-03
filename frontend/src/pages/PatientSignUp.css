@@ -1,0 +1,23 @@
+/* patient signup page */
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.error-msg {
+  color: #f44336;
+  margin-bottom: 1rem;
+}
+
+.auth-footer {
+  margin-top: 1rem;
+}

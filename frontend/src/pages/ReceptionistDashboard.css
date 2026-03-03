@@ -1,0 +1,9 @@
+/* receptionist dashboard */
+.receptionist-dashboard .section-header {
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.receptionist-dashboard .stat-card {
+  background: #333;
+}

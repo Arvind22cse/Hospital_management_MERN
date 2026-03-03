@@ -1,14 +1,26 @@
-.header {
-  background: white;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 15px rgba(0, 30, 60, 0.05);
+.app-header {
+  background: #1e1e1e;
+  padding: 0.75rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #d9e9f5;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  border-bottom: 1px solid #333;
+}
+
+.app-header .header-left h2 {
+  margin: 0;
+  color: #646cff;
+}
+
+.app-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app-header .user-info {
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
 .logo h1 {

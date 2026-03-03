@@ -11,8 +11,16 @@ const Header = ({ role, userName, onLogout }) => {
   };
 
   return (
-    <header>
-      <h1>Header</h1>
+    <header className="app-header">
+      <div className="header-left">
+        <h2>MedCare Hospital</h2>
+      </div>
+      <div className="header-right">
+        {userName && <span className="user-info">{userName} ({role})</span>}
+        <button onClick={handleLogout} className="secondary-btn">
+          Logout
+        </button>
+      </div>
     </header>
   );
 };
